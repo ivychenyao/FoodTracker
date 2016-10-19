@@ -14,11 +14,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
-    
-    // MARK: Actions
-    @IBAction func setDefaultLabelText(_ sender: AnyObject) {
-        mealNameLabel.text = "Default Text"
-    }
+    @IBOutlet weak var ratingControl: RatingControl!
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: AnyObject) {
         nameTextField.resignFirstResponder()
