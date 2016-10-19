@@ -45,12 +45,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         nameTextField.delegate = self
-        print("viewDidLoad")
-        
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        print("viewWillAppear")
     }
     
     // MARK: UITextFieldDelegate

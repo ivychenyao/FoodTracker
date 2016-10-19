@@ -12,6 +12,7 @@
 		F17FA2EF1DB31040001A483A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17FA2ED1DB31040001A483A /* Main.storyboard */; };
 		F17FA2F11DB31040001A483A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17FA2F01DB31040001A483A /* Assets.xcassets */; };
 		F17FA2F41DB31040001A483A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F17FA2F21DB31040001A483A /* LaunchScreen.storyboard */; };
+		F1A0202C1DB81B5100604B00 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A0202B1DB81B5100604B00 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		F17FA2F01DB31040001A483A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F17FA2F31DB31040001A483A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F17FA2F51DB31040001A483A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1A0202B1DB81B5100604B00 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				F17FA2E91DB31040001A483A /* AppDelegate.swift */,
 				F17FA2EB1DB31040001A483A /* ViewController.swift */,
 				F17FA2ED1DB31040001A483A /* Main.storyboard */,
+				F1A0202B1DB81B5100604B00 /* RatingControl.swift */,
 				F17FA2F01DB31040001A483A /* Assets.xcassets */,
 				F17FA2F21DB31040001A483A /* LaunchScreen.storyboard */,
 				F17FA2F51DB31040001A483A /* Info.plist */,
@@ -137,6 +140,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F17FA2EC1DB31040001A483A /* ViewController.swift in Sources */,
+				F1A0202C1DB81B5100604B00 /* RatingControl.swift in Sources */,
 				F17FA2EA1DB31040001A483A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,6 +303,7 @@
 				F17FA2FA1DB31040001A483A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
