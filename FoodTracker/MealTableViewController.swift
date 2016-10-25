@@ -10,24 +10,21 @@ import UIKit
 
 class MealTableViewController: UITableViewController {
 
+    let cellIdentifier = "MealTableViewCell"
+    
     // MARK: Properties
     var meals = [Meal] ()
     
     func loadSampleMeals() {
-        let photo1 = UIImage(named: "Chick-fil-A Sandwich.jpg")!
-        let meal1 = Meal(name: "Chick-fil-A Sandwich", photo: photo1, rating: 4)
+        let meal1 = Meal(name: "Chick-fil-A Sandwich", photo: #imageLiteral(resourceName: "Chick-fil-A-Sandwich"), rating: 5)
         
-        let photo2 = UIImage(named: "Pizza")!
-        let meal2 = Meal(name: "Pizza", photo: photo2, rating: 4)
+        let meal2 = Meal(name: "Pizza", photo: #imageLiteral(resourceName: "Pizza"), rating: 0)
         
-        let photo3 = UIImage(named: "PhoNoodleBowl.jpg")!
-        let meal3 = Meal(name: "PhoNoodleBowl", photo: photo3, rating: 4)
+        let meal3 = Meal(name: "PhoNoodleBowl", photo: #imageLiteral(resourceName: "PhoNoodleBowl"), rating: 3)
         
-        let photo4 = UIImage(named: "Pancakes")!
-        let meal4 = Meal(name: "Pancakes", photo: photo4, rating: 4)
+        let meal4 = Meal(name: "Pancakes", photo: #imageLiteral(resourceName: "Pancakes"), rating: 4)
         
-        let photo5 = UIImage(named: "Pasta")!
-        let meal5 = Meal(name: "Pasta", photo: photo5, rating: 4)
+        let meal5 = Meal(name: "Pasta", photo: #imageLiteral(resourceName: "Pasta"), rating: 2)
         
         meals += [meal1!,meal2!,meal3!,meal4!,meal5!]
         
@@ -41,6 +38,9 @@ class MealTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        loadSampleMeals()
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,24 +51,29 @@ class MealTableViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return meals.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MealTableViewCell
+        
+        let meal = meals[indexPath.row]
+        cell.mealLabel.text = meal.name
+        
+        cell.mealImageView.image = meal.photo
+        
+        cell.ratingControl.rating = meal.rating
+        
         // Configure the cell...
 
         return cell
     }
-    */
+ 
 
     /*
     // Override to support conditional editing of the table view.
