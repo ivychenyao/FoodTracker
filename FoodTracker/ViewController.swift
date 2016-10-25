@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
     @IBOutlet weak var mealNameLabel: UILabel!
     @IBOutlet weak var photoImageView: UIImageView!
     @IBOutlet weak var ratingControl: RatingControl!
+    var meal: Meal!
     
     @IBAction func selectImageFromPhotoLibrary(_ sender: AnyObject) {
         nameTextField.resignFirstResponder()
@@ -41,6 +42,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIImagePickerContro
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         nameTextField.delegate = self
+        mealNameLabel.text = meal.name
+        photoImageView.image = meal.photo
+        ratingControl.rating = meal.rating
     }
     
     // MARK: UITextFieldDelegate
